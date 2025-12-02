@@ -268,4 +268,8 @@ input{
         /* right: -20rem; */
         display: none;
     }
+
+    .rounded-gradient-left{
+        top: -39rem;
+    }
 }
