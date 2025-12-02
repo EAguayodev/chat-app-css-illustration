@@ -30,17 +30,18 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
-.chat-row {
+.chat-container {
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    /* gap: 2rem; */
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
 }
 
-.rounded-gradient-top {
+.rounded-gradient-left {
     background: #8838FF;
     background: -webkit-linear-gradient(90deg, rgba(136, 56, 255, 1) 35%, rgba(233, 66, 255, 1) 100%);
     background: -moz-linear-gradient(90deg, rgba(136, 56, 255, 1) 35%, rgba(233, 66, 255, 1) 100%);
@@ -49,41 +50,37 @@ body {
     max-width: 510px;
     width: 100%;
     height: 1018px;
-    z-index: -4;
+    z-index: -1;
     border-bottom-left-radius: 300px;
     border-bottom-right-radius: 300px;
-    /* position: absolute; */
-    position: relative;
-    top: -20rem;
-    right: 5rem;
+    position: absolute;
+    left: -6rem;
+    top: -15rem;
 }
 
-.simple-booking {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+.rounded-gradient-right {
+    background: #F5F3F7;
+    max-width: 510px;
+    width: 100%;
+    height: 1018px;
+    z-index: -1;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    position: absolute;
+    right: 0rem;
+    top: 5rem;
+    bottom: 0; 
 }
 
-.simple-booking-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 5rem;
-}
-
-.outer-phone{
-    background-color: var(--white);
-    border: 10px solid var(--white);
-    border-radius: 40px;
-}
 
 .contact {
     background: var(--gray-100);
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     border: 10px solid var(--white);
-   
     padding: 0.9rem;
+    /* max-height: 505px; */
+        /* height: 100%; */
 }
 
 .phone-contact {
@@ -101,10 +98,6 @@ body {
     gap: 1rem;
     margin-bottom: 2rem;
     padding: 1rem 1rem;
-}
-
-.phone-contact-image {
-   
 }
 
 .avatar-img {
@@ -132,7 +125,6 @@ body {
     border-radius: 50%;
     margin-bottom: 0.2rem;
 }
-.phone-body {}
 
 .text-1, .text-2, .text-6 {
     background: var(--purple-50);
@@ -151,9 +143,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
-    /* margin-bottom: 0.5rem; */
 }
-
 .text-4{
     background: var(--white);
     padding: 0.5rem 1rem;
@@ -241,16 +231,6 @@ input{
     line-height: 1.8rem;
 }
 
-.rounded-shade-top {
-    background: #F5F3F7;
-    width: 100%;
-    z-index: -4;
-    border-top-left-radius: 300px;
-    border-top-right-radius: 300px;
-    position: relative;
-    top: 10rem;
-}
-
 .attribution {
     font-size: 1rem;
     text-align: center;
@@ -260,14 +240,32 @@ input{
     color: hsl(228, 45%, 44%);
 }
 
+.fa-solid {
+    color: var(--white);
+    font-size: 1rem;
+}       
+
 @media(max-width: 64rem) {
-    .simple-booking-row {
+    .chat-container {
         flex-direction: column;
         gap: 3rem;
         text-align: center;
     }
+    .rounded-gradient-left{
+        left: -14rem;
+    }
 }
 
 @media(max-width: 48rem) {
+    .chat-container {
+        overflow-y: scroll;
+    }
+    .booking-description p{
+        width: 20rem;
+    }
 
+    .rounded-gradient-right{
+        /* right: -20rem; */
+        display: none;
+    }
 }
