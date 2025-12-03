@@ -30,7 +30,7 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 .chat-container {
@@ -260,12 +260,12 @@ input{
     .chat-container {
         overflow-y: scroll;
     }
+
     .booking-description p{
         width: 20rem;
     }
 
     .rounded-gradient-right{
-        /* right: -20rem; */
         display: none;
     }
 
